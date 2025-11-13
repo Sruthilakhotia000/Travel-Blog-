@@ -1,0 +1,206 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #0a3d62;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f8c291;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  background: #ffffff;
+  text-align: center;
+  padding: 60px 20px; /* reduced padding for a tighter layout */
+  color: #333;
+  line-height: 1.6;
+  margin-top: 30px; /* minimal space after header */
+}
+
+.about h2 {
+  font-size: 2em;
+  color: #0a3d62;
+  margin-bottom: 20px;
+  text-decoration: underline; /* underline heading */
+  text-underline-offset: 6px; /* adds a little space between text and underline */
+  text-decoration-thickness: 2px; /* makes the underline slightly bolder */
+}
+
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  color: #555;
+}
+
+/* spacing between header and about section */
+header + .about {
+  margin-top: 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* proportional to 1920x1080 image, still responsive */
+  background-image: url("hero\ section\ image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin: 60px 0; /* spacing above (from About) and below (to Destinations) */
+}
+
+/* overlay for text visibility */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay for clarity */
+  z-index: 0;
+}
+
+/* text container */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+/* heading inside hero */
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 25px; /* space between heading and paragraph */
+  letter-spacing: 1px;
+}
+
+/* paragraph inside hero */
+.hero-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 30px; /* space before button */
+}
+
+/* call-to-action button */
+.hero-content .btn {
+  display: inline-block;
+  background: #f8c291;
+  color: #0a3d62;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #f6b48f;
+  transform: scale(1.05);
+}
+
+
+
+
+/* Destinations Section */
+.destinations {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f1f2f6;
+}
+
+.destinations h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #0a3d62;
+}
+
+.destinations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.destination {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.destination h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: #0a3d62;
+}
+
+.destination p {
+  margin: 10px 20px 20px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
